@@ -54,8 +54,8 @@ public class ServiceEnderecoImpl implements ServiceViaCep, ServiceEndereco {
     }
 
     @Override
-  public List<Endereco> enderecosContaById(Long id) {
-      List<Endereco> enderecosByContaId = this.enderecoRepository.findEnderecosByContaId(id);
+  public List<EnderecoDTO> enderecosContaById(Long id) {
+      List<EnderecoDTO> enderecosByContaId = this.enderecoRepository.findEnderecosByContaId(id);
       return enderecosByContaId;
   }
 

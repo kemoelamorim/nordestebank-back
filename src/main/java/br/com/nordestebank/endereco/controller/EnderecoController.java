@@ -1,7 +1,6 @@
 package br.com.nordestebank.endereco.controller;
 
 import br.com.nordestebank.conta.model.Conta;
-import br.com.nordestebank.conta.model.ContaDTO;
 import br.com.nordestebank.conta.service.ContaServiceImpl;
 import br.com.nordestebank.endereco.model.Endereco;
 import br.com.nordestebank.endereco.model.EnderecoDTO;
@@ -11,10 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import io.swagger.annotations.*;
 import br.com.nordestebank.endereco.service.ServiceEnderecoImpl;
-
 import java.util.List;
 
 @Slf4j
@@ -46,7 +43,7 @@ public class EnderecoController {
     })
     @GetMapping("/findAll/conta/{id}")
     public ResponseEntity<?> enderecoContaById(@PathVariable("id") Long id){
-        List<Endereco> enderecos = this.serviceEnderecoImpl.enderecosContaById(id);
+        List<EnderecoDTO> enderecos = this.serviceEnderecoImpl.enderecosContaById(id);
         if(enderecos != null){
           return !enderecos.isEmpty() ? ResponseEntity.ok(enderecos) : ResponseEntity.noContent().build();
         }

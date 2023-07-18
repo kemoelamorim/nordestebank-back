@@ -15,4 +15,5 @@ public interface ContaRepository extends JpaRepository<Conta, Long>{
     @Modifying
     @Query("DELETE FROM Endereco e WHERE e.conta.id = :idConta")
     void deleteEnderecosByContaId(Long idConta);
+
 }

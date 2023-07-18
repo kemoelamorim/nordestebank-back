@@ -56,6 +56,13 @@ public class ContaServiceImpl implements ContaService{
   }
 
   @Override
+  public List<ContaDTO> findAll() {
+    List<Conta> contas = this.contaRepository.findAll();
+    List<ContaDTO> listDTO = ContaDTO.converter(contas);
+    return listDTO;
+  }
+
+  @Override
   public Conta findById(Long id) {
     if(id != null){
       Optional<Conta> contaOptional = this.contaRepository.findById(id);

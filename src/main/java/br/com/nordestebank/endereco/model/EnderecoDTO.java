@@ -5,7 +5,6 @@ import br.com.nordestebank.endereco.model.enums.TipoEndereco;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,6 +24,7 @@ public class EnderecoDTO {
 
     private Conta conta;
     public EnderecoDTO(Endereco endereco){
+        this.id = endereco.getId();
         this.cep = endereco.getCep();
         this.tipoEndereco = endereco.getTipoEndereco();
         this.logradouro = endereco.getLogradouro();
@@ -33,7 +33,7 @@ public class EnderecoDTO {
         this.localidade = endereco.getLocalidade();
         this.numero = endereco.getNumero();
         this.uf = endereco.getUf();
-        this.conta = endereco.getConta();
+
     }
 
     public static List<EnderecoDTO> converter(List<Endereco> enderecoList) {

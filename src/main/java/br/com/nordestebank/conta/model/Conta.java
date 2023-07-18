@@ -1,12 +1,7 @@
 package br.com.nordestebank.conta.model;
 
-import java.util.List;
 import javax.persistence.*;
-
 import br.com.nordestebank.conta.model.enums.TipoConta;
-import br.com.nordestebank.endereco.model.Endereco;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 @Getter
