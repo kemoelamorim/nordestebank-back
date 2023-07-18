@@ -11,3 +11,5 @@
 - Rode o Script de criação que está na raiz do projeto em scripts > CREATE.sql
 - Rode o projetos com o comando (./mvnw spring-boot:run)
 - Rode o Script de INSERT que esta na raiz do projeto em scripts > INSERTS.sql
+
+URL: http://localhost:8080/swagger-ui/#/
