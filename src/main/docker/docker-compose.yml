@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  nordestebankssql-mssql:
+    image: mcr.microsoft.com/mssql/server:2019-CU16-GDR1-ubuntu-20.04
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+      - SA_PASSWORD=yourStrong(!)Password
+      - MSSQL_SLEEP=60
+    ports:
+      - 127.0.0.1:1433:1433
