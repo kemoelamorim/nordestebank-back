@@ -66,4 +66,19 @@ public class ServiceEnderecoImpl implements ServiceViaCep, ServiceEndereco {
       }
       throw new RuntimeException("Problema ao salvar endereco.");
     }
+
+    @Override
+    public EnderecoDTO findById(Long id) {
+       if (id != null) {
+            Optional<Endereco> enderecoOptional = this.enderecoRepository.findById(id);
+            if (enderecoOptional.isPresent()) {
+                EnderecoDTO endereco = new EnderecoDTO(enderecoOptional.get());
+                return endereco;
+            } else {
+                throw new RuntimeException("Endereco não encontrado.");
+            }
+        } else {
+            throw new RuntimeException("Problema ao editar endereco.");
+        }
+    }
 }

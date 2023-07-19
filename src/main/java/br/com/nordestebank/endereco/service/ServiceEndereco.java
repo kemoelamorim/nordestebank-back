@@ -11,4 +11,5 @@ public interface ServiceEndereco {
   public Endereco saveEndereco(EnderecoDTO enderecoDTO);
   public Endereco editEndereco(EnderecoDTO enderecoDTO);
   public void deleteEndereco(Long id);
+  public EnderecoDTO findById(Long id);
 }

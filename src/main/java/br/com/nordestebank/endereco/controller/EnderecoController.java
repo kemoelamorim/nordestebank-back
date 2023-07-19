@@ -1,6 +1,7 @@
 package br.com.nordestebank.endereco.controller;
 
 import br.com.nordestebank.conta.model.Conta;
+import br.com.nordestebank.conta.model.ContaDTO;
 import br.com.nordestebank.conta.service.ContaServiceImpl;
 import br.com.nordestebank.endereco.model.Endereco;
 import br.com.nordestebank.endereco.model.EnderecoDTO;
@@ -96,6 +97,23 @@ public class EnderecoController {
         if (id != null) {
             this.serviceEnderecoImpl.deleteEndereco(id);
             return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    @ApiOperation(value = "Retorna um endereco")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma endereco"),
+            @ApiResponse(code = 204, message = "Sem conteúdo"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
+    })
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findById(@PathVariable("id") Long id) {
+        log.info("findById - Endereco");
+         if (id != null) {
+            EnderecoDTO endereco = this.serviceEnderecoImpl.findById(id);
+            return new ResponseEntity<>(new Endereco(endereco), HttpStatus.OK);
         } else {
             return ResponseEntity.badRequest().build();
         }
