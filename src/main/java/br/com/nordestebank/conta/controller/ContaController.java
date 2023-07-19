@@ -72,10 +72,10 @@ public class ContaController {
     })
     @GetMapping("/search")
     public ResponseEntity<?> buscaPorNome(
-        @RequestParam(name = "search", required = false) String search
+        @RequestParam(name = "nome", required = false) String nome
     ){  
-        log.info("Buscando cantas por nome {}", search);
-        List<ContaDTO> contas = contaService.findByNome(search);
+        log.info("Buscando cantas por nome {}", nome);
+        List<ContaDTO> contas = contaService.findByNome(nome);
         return !contas.isEmpty() ? ResponseEntity.ok(contas) : ResponseEntity.noContent().build();
     }
 

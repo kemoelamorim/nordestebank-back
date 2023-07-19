@@ -1,34 +1,35 @@
 -- Inserts para as contas de ID 1 a 10
 
+-- Inserts de Contas
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('FISICA', 'João Silva', '12345678901', '11', 'joao.silva@example.com');
+VALUES ('FISICA', 'João Silva', '12345678901', '11 987654321', 'joao.silva@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('JURIDICA', 'Maria Souza', '98765432109', '21', 'maria.souza@example.com');
+VALUES ('JURIDICA', 'Maria Souza', '98765432109', '21 987654321', 'maria.souza@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('FISICA', 'Pedro Santos', '45678912304', '31', 'pedro.santos@example.com');
+VALUES ('FISICA', 'Pedro Santos', '45678912304', '31 987654321', 'pedro.santos@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('JURIDICA', 'Ana Oliveira', '32165498708', '41', 'ana.oliveira@example.com');
+VALUES ('JURIDICA', 'Ana Oliveira', '32165498708', '41 987654321', 'ana.oliveira@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('FISICA', 'Carlos Rodrigues', '65498732105', '51', 'carlos.rodrigues@example.com');
+VALUES ('FISICA', 'Carlos Rodrigues', '65498732105', '51 987654321', 'carlos.rodrigues@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('JURIDICA', 'Laura Mendes', '98732165403', '61', 'laura.mendes@example.com');
+VALUES ('JURIDICA', 'Laura Mendes', '98732165403', '61 987654321', 'laura.mendes@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('FISICA', 'Lucas Fernandes', '78932165402', '71', 'lucas.fernandes@example.com');
+VALUES ('FISICA', 'Lucas Fernandes', '78932165402', '71 987654321', 'lucas.fernandes@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('JURIDICA', 'Julia Costa', '12398745606', '81', 'julia.costa@example.com');
+VALUES ('JURIDICA', 'Julia Costa', '12398745606', '81 987654321', 'julia.costa@example.com');
 
 INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
-VALUES ('FISICA', 'Mateus Almeida', '98745632100', '91', 'mateus.almeida@example.com');
+VALUES ('FISICA', 'Mateus Almeida', '98745632100', '91 987654321', 'mateus.almeida@example.com');
 
-INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) VALUES 
-('JURIDICA', 'Lara Ribeiro', '65432178905', '10', 'lara.ribeiro@example.com');
+INSERT INTO TB_CONTA (TIPO_CONTA, TITULAR, CPF_CNPJ, DDD_TELEFONE, EMAIL) 
+VALUES ('JURIDICA', 'Lara Ribeiro', '65432178905', '10 987654321', 'lara.ribeiro@example.com');
 
 -- Insertes de Endereços para contas
 
