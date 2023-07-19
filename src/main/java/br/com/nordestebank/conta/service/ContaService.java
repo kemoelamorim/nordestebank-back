@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 public interface ContaService {
     public Page<ContaDTO> findAll(Pageable pageable);
     public List<ContaDTO> findAll();
+    public List<ContaDTO> findByNome(String search);
     public Conta findById(Long id);
     public Conta saveConta(ContaDTO contaDTO);
     public Conta editConta(ContaDTO contaDTO);

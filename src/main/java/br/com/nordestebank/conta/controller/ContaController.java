@@ -62,8 +62,23 @@ public class ContaController {
         if(!contas.getContent().isEmpty()){
             return !contas.isEmpty() ? ResponseEntity.ok(contas) : ResponseEntity.noContent().build();
         }
-        return  ResponseEntity.badRequest().build();
+        return ResponseEntity.badRequest().build();
     }
+    @ApiOperation(value = "Retorna todas as contas filtradas por nome")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma busca por nome"),
+            @ApiResponse(code = 204, message = "Sem conteúdo"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @GetMapping("/search")
+    public ResponseEntity<?> buscaPorNome(
+        @RequestParam(name = "search", required = false) String search
+    ){  
+        log.info("Buscando cantas por nome {}", search);
+        List<ContaDTO> contas = contaService.findByNome(search);
+        return !contas.isEmpty() ? ResponseEntity.ok(contas) : ResponseEntity.noContent().build();
+    }
+
 
     @ApiOperation(value = "Retorna uma conta")
     @ApiResponses(value = {

@@ -83,5 +83,10 @@ public class ContaServiceImpl implements ContaService{
     }
     throw new RuntimeException("Problema ao salvar conta.");
   }
+
+  @Override
+  public List<ContaDTO> findByNome(String search) {
   
+    return ContaDTO.converter(contaRepository.findByTitularLike(search));
+  }
 }
