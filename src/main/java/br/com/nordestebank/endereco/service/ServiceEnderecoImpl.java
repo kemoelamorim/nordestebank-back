@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import br.com.nordestebank.conta.model.Conta;
 import br.com.nordestebank.endereco.model.Endereco;
 import br.com.nordestebank.endereco.model.EnderecoDTO;
 
@@ -44,6 +45,8 @@ public class ServiceEnderecoImpl implements ServiceViaCep, ServiceEndereco {
             Optional<Endereco> enderecoOptional = this.enderecoRepository.findById(enderecoDTO.getId());
             if (enderecoOptional.isPresent()) {
                 Endereco endereco = new Endereco(enderecoDTO);
+                Conta conta = enderecoDTO.getConta();
+                endereco.setConta(conta);
                 return this.enderecoRepository.save(endereco);
             } else {
                 throw new RuntimeException("Endereco não encontrado.");
